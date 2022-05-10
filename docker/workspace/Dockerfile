@@ -11,6 +11,6 @@ RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2
 && curl -L -o direnv https://github.com/direnv/direnv/releases/download/v2.29.0/direnv.linux-amd64 \
   && chmod +x direnv \
   && mv direnv /usr/local/bin/ \
-  && echo 'eval "$(direnv hook bash)"' >> /home/.bashrc
+  && echo 'eval "$(direnv hook bash)"' >> /root/.bashrc
 
 WORKDIR /work/ts-next-sample
