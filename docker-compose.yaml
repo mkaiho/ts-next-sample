@@ -1,0 +1,22 @@
+version: "3.9"
+
+services:
+  workspace:
+    build:
+      context: .
+      dockerfile: ./docker/workspace/Dockerfile
+    container_name: ts-next-sample-workspace
+    tty: true
+    volumes:
+      - .:/work/ts-next-sample
+      - ts-next-sample_node_modules_volume:/work/ts-next-sample/node_modules
+    working_dir: /work/ts-next-sample
+    ports:
+      - 4000:3000
+
+volumes:
+  ts-next-sample_node_modules_volume:
+
+networks:
+  auth-sample-network:
+    external: true
