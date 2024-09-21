@@ -15,5 +15,8 @@
   },
   "[typescript]": {
     "editor.detectIndentation": true
+  },
+  "files.associations": {
+    "*.css": "tailwindcss"
   }
 }
