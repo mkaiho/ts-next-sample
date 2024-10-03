@@ -17,7 +17,11 @@ const Button: FC<Props> = ({ children, type, onClick }: Props) => {
 
   return (
     <>
-      <button type={type} onClick={(e) => handleClick(e)}>
+      <button
+        className="rounded bg-blue-500 px-4 py-2 text-white"
+        type={type}
+        onClick={(e) => handleClick(e)}
+      >
         {children}
       </button>
     </>
