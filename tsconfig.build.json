@@ -1,4 +1,12 @@
 {
   "extends": "./tsconfig.json",
-  "exclude": ["node_modules", "src/mocks", "**/*.test.tsx", ""]
+  "exclude": [
+    "node_modules",
+    "src/mocks",
+    "**/*.test.tsx",
+    ""
+  ],
+  "compilerOptions": {
+    "target": "ES2017"
+  }
 }
