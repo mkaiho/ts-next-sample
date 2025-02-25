@@ -4,7 +4,7 @@ SHELL ["/bin/bash", "-c"]
 
 ARG ASDF_VERSION=v0.14.0
 ARG DIRENV_VERSION=2.34.0
-ARG NODE_VERSION=20.17.0
+ARG NODE_VERSION=22.14.0
 
 RUN apt-get update -y && apt-get install -y \
   curl gcc make git zip unzip jq openssl ca-certificates gnupg lsb-release groff default-mysql-client pass gnupg2 iproute2 iputils-ping
