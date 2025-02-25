@@ -12,7 +12,9 @@ const Button: FC<Props> = ({ children, type, onClick }: Props) => {
   const handleClick = (
     event?: MouseEvent<HTMLButtonElement, globalThis.MouseEvent>,
   ) => {
-    onClick && onClick(event)
+    if (onClick) {
+      onClick(event)
+    }
   }
 
   return (
