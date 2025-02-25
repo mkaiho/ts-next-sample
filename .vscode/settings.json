@@ -18,5 +18,6 @@
   },
   "files.associations": {
     "*.css": "tailwindcss"
-  }
+  },
+  "tailwindCSS.experimental.configFile": "./tailwind.config.ts"
 }
