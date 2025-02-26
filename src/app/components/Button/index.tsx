@@ -1,4 +1,4 @@
-import { FC, MouseEvent, ReactNode, useRef, useState } from "react"
+import { FC, MouseEvent, ReactNode } from "react"
 
 interface Props {
   children?: ReactNode
@@ -12,13 +12,15 @@ const Button: FC<Props> = ({ children, type, onClick }: Props) => {
   const handleClick = (
     event?: MouseEvent<HTMLButtonElement, globalThis.MouseEvent>,
   ) => {
-    onClick && onClick(event)
+    if (onClick) {
+      onClick(event)
+    }
   }
 
   return (
     <>
       <button
-        className="rounded bg-blue-500 px-4 py-2 text-white"
+        className="rounded-sm bg-blue-500 px-4 py-2 text-white"
         type={type}
         onClick={(e) => handleClick(e)}
       >
